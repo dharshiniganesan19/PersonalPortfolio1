@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Dharshini Portfolio</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Dharshini</h1>
+
+<p>Data Science Student</p>
+
+</header>
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+I am a passionate Data Science student
+interested in Machine Learning,
+Artificial Intelligence,
+Data Analytics and Web Development.
+</p>
+
+</section>
+
+<section>
+
+<h2>Skills</h2>
+
+<ul>
+
+<li>Python</li>
+
+<li>Machine Learning</li>
+
+<li>Data Science</li>
+
+<li>HTML</li>
+
+<li>CSS</li>
+
+<li>JavaScript</li>
+
+<li>Flask</li>
+
+<li>SQLite</li>
+
+<li>GitHub</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Projects</h2>
+
+{% for project in projects %}
+
+<div class="card">
+
+<h3>{{ project[1] }}</h3>
+
+<p>{{ project[2] }}</p>
+
+</div>
+
+{% endfor %}
+
+</section>
+
+<section>
+
+<h2>Education</h2>
+
+<p>
+B.tech Computer Science Business System (CSBS)
+</p>
+
+</section>
+
+<section>
+
+<h2>Achievements</h2>
+
+<ul>
+
+<li>Completed Machine Learning Projects</li>
+
+<li>Built Portfolio Website</li>
+
+<li>Worked on Healthcare Prediction Models</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Contact</h2>
+
+<form>
+
+<input type="text"
+placeholder="Enter Your Name">
+
+<input type="email"
+placeholder="Enter Your Email">
+
+<textarea
+placeholder="Enter Your Message">
+</textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Dharshini Portfolio Website
+</p>
+
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+
+</html>
